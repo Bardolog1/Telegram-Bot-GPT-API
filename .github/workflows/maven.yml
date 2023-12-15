@@ -41,6 +41,6 @@ jobs:
           export PATH="$FLYCTL_INSTALL/bin:$PATH"
 
       - name: Deploy to Fly.io
-        run: fly launch 
+        run: fly deploy
         env:
           FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
