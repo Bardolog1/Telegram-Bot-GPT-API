@@ -40,22 +40,25 @@ jobs:
           echo "TELEGRAM_BOT_API_KEY=${{ secrets.TELEGRAM_BOT_API_KEY }}" >> .env
           echo "CHAT_GPT_API_KEY=${{ secrets.CHAT_GPT_API_KEY }}" >> .env
 
+            
+      - name: Define .env docker-compose
+        run: |
+          docker-compose --env-file=.env up -d
+   
+
+
       - name: Install flyctl
         run: |
           curl -L https://fly.io/install.sh | sh
-          export FLYCTL_INSTALL="/home/runner/.fly" # Reemplaza con tu directorio de instalación de flyctl
+          export FLYCTL_INSTALL="/home/runner/.fly" 
           export PATH="/home/runner/.fly/bin/flyctl" 
   
 
       - name: Check flyctl version
         run: /home/runner/.fly/bin/flyctl version
 
-      
-      - name: Deploy to Fly.io
+      - name: Deploy flyctl
         run: |
-          docker-compose --env-file=.env up -d
-        env:
-          FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
-
+           /home/runner/.fly/bin/flyctl deploy
      
           
