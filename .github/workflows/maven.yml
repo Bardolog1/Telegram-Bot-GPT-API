@@ -46,18 +46,17 @@ jobs:
 
       - name: Save env variables to file
         run: |
-          echo "TELEGRAM_BOT_NAME=${{ secrets.TELEGRAM_BOT_NAME }}" >> env.list
-          echo "TELEGRAM_BOT_API_KEY=${{ secrets.TELEGRAM_BOT_API_KEY }}" >> env.list
-          echo "CHAT_GPT_API_KEY=${{ secrets.CHAT_GPT_API_KEY }}" >> env.list
+          echo "TELEGRAM_BOT_NAME=${{ secrets.TELEGRAM_BOT_NAME }}" >> .env
+          echo "TELEGRAM_BOT_API_KEY=${{ secrets.TELEGRAM_BOT_API_KEY }}" >> .env
+          echo "CHAT_GPT_API_KEY=${{ secrets.CHAT_GPT_API_KEY }}" >> .env
         env:
           FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
 
       - name: Deploy to Fly.io
         run: |
-          docker-compose --env-file=env.list up -d
+          docker-compose --env-file=.env up -d
         env:
           FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
-          # Agrega otras variables de entorno aquí si las necesitas
 
      
           
