@@ -34,7 +34,7 @@ jobs:
           echo "CHAT_GPT_API_KEY=${{ secrets.CHAT_GPT_API_KEY }}" >> .env
           
       - name: Define .env docker-compose
-        run: docker-compose --env-file= .env up -d
+        run: docker-compose --env-file=.env up -d
    
 
       - name: Build and push Docker image
