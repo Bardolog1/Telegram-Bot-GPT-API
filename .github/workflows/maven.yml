@@ -48,6 +48,9 @@ jobs:
         run: |
           echo "TELEGRAM_BOT_NAME=${{ secrets.TELEGRAM_BOT_NAME }}" >> env.list
           echo "TELEGRAM_BOT_API_KEY=${{ secrets.TELEGRAM_BOT_API_KEY }}" >> env.list
+          echo "CHAT_GPT_API_KEY=${{ secrets.CHAT_GPT_API_KEY }}" >> env.list
+        env:
+          FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
 
       - name: Deploy to Fly.io
         run: |
@@ -57,6 +60,4 @@ jobs:
           # Agrega otras variables de entorno aquí si las necesitas
 
      
-          echo "CHAT_GPT_API_KEY=${{ secrets.CHAT_GPT_API_KEY }}" >> env.list
-        env:
-          FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
+          
