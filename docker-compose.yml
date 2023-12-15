@@ -5,5 +5,6 @@ services:
     container_name: bot_chat
     image: pee-java-app:1.0.0
     build: .
+    env_file: env.list 
     ports:
       - 8080:8080
