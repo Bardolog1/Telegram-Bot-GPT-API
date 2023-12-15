@@ -117,13 +117,14 @@ public class MultiSessionTelegramBot extends TelegramLongPollingBot {
 
     public static String getEnvVariable(String variableName) {
         try {
-            Dotenv dotenv = Dotenv.load();
-
-            return dotenv.get(variableName);
+            return System.getenv(variableName);
         }catch (Exception e){
             e.printStackTrace();
         }
-        return System.getenv(variableName);
+
+        Dotenv dotenv = Dotenv.load();
+        return dotenv.get(variableName);
+
     }
 
 

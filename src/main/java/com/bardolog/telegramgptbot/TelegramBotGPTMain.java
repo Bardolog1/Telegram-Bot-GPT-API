@@ -27,7 +27,7 @@ public class TelegramBotGPTMain extends MultiSessionTelegramBot {
         if (!getMessageText().isEmpty()) {
 
             String userMessage = getMessageText();
-            
+
             // Asegurarse de que el mensaje esté codificado correctamente
             try {
                 userMessage = new String(getMessageText().getBytes("UTF-8"), "UTF-8");
