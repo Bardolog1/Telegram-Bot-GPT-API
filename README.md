@@ -1,6 +1,6 @@
 # TelegramGPTBot 🤖💬
 
-Este es un bot de Telegram que utiliza la API de OpenAI para generar respuestas mediante al igual que ChatGPT, ¡perfecto para tener conversaciones interesantes!
+Este es un bot de Telegram que utiliza la API de OpenAI para generar respuestas mediante ChatGPT en una entorno de Telegram, ¡Perfecto para tener conversaciones interesantes!
 
 ### Overview 🌐
 
