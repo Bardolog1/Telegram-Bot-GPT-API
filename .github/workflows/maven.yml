@@ -38,7 +38,7 @@ jobs:
         run: |
           curl -L https://fly.io/install.sh | sh
           export FLYCTL_INSTALL="/home/runner/.fly" # Reemplaza con tu directorio de instalación de flyctl
-          export PATH="$PATH:/home/runner/.fly/bin"
+          export PATH="/home/runner/.fly/bin/flyctl" 
   
 
       - name: Check flyctl version
