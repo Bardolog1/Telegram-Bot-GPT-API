@@ -42,7 +42,7 @@ jobs:
   
 
       - name: Check flyctl version
-        run: flyctl version
+        run: /home/runner/.fly/bin/flyctl version
 
       - name: Deploy to Fly.io
         run: flyctl deploy
