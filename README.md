@@ -2,6 +2,9 @@
 
 Este es un bot de Telegram que utiliza la API de OpenAI para generar respuestas mediante ChatGPT en una entorno de Telegram, ¡Perfecto para tener conversaciones interesantes!
 
+![image](https://github.com/Bardolog1/Telegram-Bot-GPT-API/assets/64260884/31e19df2-da05-4ee6-b2be-7785f8cdb7f7)
+
+
 ### Overview 🌐
 
 Puedes probar el bot funcional en Telegram: [LilogaBot](https://t.me/LilogaBot).
