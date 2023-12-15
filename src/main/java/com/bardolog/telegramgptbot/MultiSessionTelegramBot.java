@@ -116,9 +116,16 @@ public class MultiSessionTelegramBot extends TelegramLongPollingBot {
     }
 
     public static String getEnvVariable(String variableName) {
-        Dotenv dotenv = Dotenv.load();
-        return dotenv.get(variableName);
+        try {
+            Dotenv dotenv = Dotenv.load();
+
+            return dotenv.get(variableName);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return System.getenv(variableName);
     }
+
 
     public SendPhoto createPhotoMessage(String name) {
         try {
