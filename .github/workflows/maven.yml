@@ -35,7 +35,7 @@ jobs:
           docker push bardolog1/pee-java-app:1.0.0
 
       - name: Install flyctl
-        run: curl -L https://getfly.fly.dev/install.sh | sh
+        run: curl -L https://fly.io/install.sh | sh
 
       - name: Deploy to Fly.io
         run: flyctl deploy -i bardolog1:pee-java-app:1.0.0
