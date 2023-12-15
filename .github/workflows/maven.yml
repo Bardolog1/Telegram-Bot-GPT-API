@@ -40,6 +40,7 @@ jobs:
           export FLYCTL_INSTALL="/home/runner/.fly" # Reemplaza con tu directorio de instalación de flyctl
           export PATH="$FLYCTL_INSTALL/bin:$PATH"
 
+
       - name: Deploy to Fly.io
         run: flyctl deploy
         env:
