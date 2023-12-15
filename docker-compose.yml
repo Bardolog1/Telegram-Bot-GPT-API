@@ -1,0 +1,9 @@
+version: '3.9'
+
+services:
+  bot_chat:
+    container_name: bot_chat
+    image: pee-java-app:1.0.0
+    build: .
+    ports:
+      - 8080:8080

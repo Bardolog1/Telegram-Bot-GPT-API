@@ -1,0 +1,7 @@
+.idea\shelf
+.idea\workspace.xml
+fly.toml
+.idea
+target
+.env
+*.iml
